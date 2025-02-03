@@ -81,7 +81,6 @@ celerybeat-schedule
 *.sage.py
 
 # dotenv
-.env
 
 # virtualenv
 .venv
@@ -147,3 +146,4 @@ truffle-local.js
 Gemfile
 Gemfile.lock
 _site/
+config.bat

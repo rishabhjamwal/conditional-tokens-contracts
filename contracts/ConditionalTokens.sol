@@ -111,7 +111,7 @@ contract ConditionalTokens is ERC1155 {
     ) external {
         require(partition.length > 1, "got empty or singleton partition");
         uint outcomeSlotCount = payoutNumerators[conditionId].length;
-        require(outcomeSlotCount > 0, "condition not prepared yet");
+        require(outcomeSlotCount > 1, "condition not prepared yet");
 
         // For a condition with 4 outcomes fullIndexSet's 0b1111; for 5 it's 0b11111...
         uint fullIndexSet = (1 << outcomeSlotCount) - 1;
@@ -171,7 +171,7 @@ contract ConditionalTokens is ERC1155 {
     ) external {
         require(partition.length > 1, "got empty or singleton partition");
         uint outcomeSlotCount = payoutNumerators[conditionId].length;
-        require(outcomeSlotCount > 0, "condition not prepared yet");
+        require(outcomeSlotCount > 1, "condition not prepared yet");
 
         uint fullIndexSet = (1 << outcomeSlotCount) - 1;
         uint freeIndexSet = fullIndexSet;
